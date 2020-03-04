@@ -2,12 +2,12 @@
 
 This is the starting point for the REST Tic Tac Toe exercise.
 
-The project is composed by two modules:
+The project is composed by three modules:
 - [server](server/) - implementation of service
+- [contract](contract/) - exchanged messages definition
 - [client](client/) - invocation of service
 
-See the README for each module.
-Start at the server and then go to the client.
+See the README for each module. Start at contract, then go to server, and finally go to the client.
 
 
 ----

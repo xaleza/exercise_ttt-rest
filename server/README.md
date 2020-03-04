@@ -2,12 +2,14 @@
 
 This is a REST implementation of the Tic Tac Toe game.
 
+The server depends on the contract module, where the messages shared between server and client are defined. 
+
 ## Instructions for using Maven
 
-To install and run the server:
+To compile and run the server:
 
 ```
-mvn install exec:java
+mvn compile exec:java
 ```
 
 

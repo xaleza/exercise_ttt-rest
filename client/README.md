@@ -2,12 +2,11 @@
 
 This is a client for the REST implementation of the Tic Tac Toe game.
 
-The client depends on the server module, 
-where the messages exchanged shared between server and client are defined.
+The client depends on the contract module, where the messages shared between server and client are defined. 
 
 ## Instructions for using Maven
 
-Make sure that you installed the server module first.
+Make sure that you installed the contract module first.
 
 To compile and run the client:
 

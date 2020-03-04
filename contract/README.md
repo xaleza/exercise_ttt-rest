@@ -1,10 +1,6 @@
-# Rest API TTT - contract
+# REST Tic Tac Toe shared library
 
-This small library contains the exchanged messages definition of the
-Tic Tac Toe application.
-
-The interface is shared by the server, that implements it, and
-by the client, that needs it to make remote calls.
+This small library contains the definition of messages exchanged between the server and the client of the Tic Tac Toe application.
 
 
 ## Instructions for using Maven
