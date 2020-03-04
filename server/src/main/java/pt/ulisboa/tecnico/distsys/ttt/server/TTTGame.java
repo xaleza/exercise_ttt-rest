@@ -1,5 +1,7 @@
 package pt.ulisboa.tecnico.distsys.ttt.server;
 
+import pt.ulisboa.tecnico.distsys.ttt.contract.PlayResult;
+
 public class TTTGame {
 	private char board[][];
 	private int numPlays = 0;

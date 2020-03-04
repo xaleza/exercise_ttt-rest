@@ -8,8 +8,8 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import pt.ulisboa.tecnico.distsys.ttt.server.PlayRequest;
-import pt.ulisboa.tecnico.distsys.ttt.server.PlayResult;
+import pt.ulisboa.tecnico.distsys.ttt.contract.PlayRequest;
+import pt.ulisboa.tecnico.distsys.ttt.contract.PlayResult;
 
 public class TTTPlayer {
 
