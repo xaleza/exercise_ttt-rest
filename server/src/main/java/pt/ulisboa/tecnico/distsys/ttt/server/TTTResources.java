@@ -51,4 +51,11 @@ public class TTTResources {
     
     
     /* TODO: checkwinner, play */
+    @GET
+    @Path("board/checkwinner")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String checkWinner() {
+        int winner = game.checkWinner();
+        return Integer.toString(winner);
+    }
 }
