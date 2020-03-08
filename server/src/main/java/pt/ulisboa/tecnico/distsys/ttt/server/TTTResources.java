@@ -55,7 +55,7 @@ public class TTTResources {
     
     /* TODO: checkwinner, play */
     @GET
-    @Path("board/checkwinner")
+    @Path("checkwinner")
     @Produces(MediaType.TEXT_PLAIN)
     public String checkWinner() {
         int winner = game.checkWinner();
@@ -68,5 +68,12 @@ public class TTTResources {
     @Produces({MediaType.APPLICATION_JSON})
     public PlayResult play(PlayRequest playRequest) {
         return game.play(playRequest.getRow(), playRequest.getColumn(), playRequest.getPlayer());
+    }
+
+    @GET
+    @Path("play/{row}/{column}/{player}")
+    @Produces({MediaType.APPLICATION_JSON})
+    public PlayResult playURL(@PathParam("row") int row, @PathParam("column") int column, @PathParam("player") int player) {
+        return game.play(row, column, player);
     }
 }
