@@ -77,17 +77,18 @@ public class TTTPlayer {
                 
                 /* Uncomment to use URL parameter to play */
                 /* URL to play is: play/{row}/{column}/{player} */
-                /* String playString = "play/" +  String.valueOf(row) + '/' + String.valueOf(column) + '/' + String.valueOf(player); */
-                                
+                String playString = "play/" +  String.valueOf(row) + '/' + String.valueOf(column) + '/' + String.valueOf(player);
+                
+                /*
                 Response response = client.target(restURL).path("play").request(MediaType.APPLICATION_JSON)
-              	      .post(Entity.entity(playRequest, MediaType.APPLICATION_JSON), Response.class);
+              	      .post(Entity.entity(playRequest, MediaType.APPLICATION_JSON), Response.class); */
                 
                 /* Use for debug */
                 /* System.out.println(response.getStatus()); */
                 
-                play_res = response.readEntity(PlayResult.class);
-                /* play_res = client.target(restURL).path(playString).request().get(PlayResult.class); */
-                
+                /* play_res = response.readEntity(PlayResult.class); */
+                play_res = client.target(restURL).path(playString).request().get(PlayResult.class);
+
                 if (play_res != PlayResult.SUCCESS) {
                     displayResult(play_res);
                 }
