@@ -8,6 +8,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import pt.ulisboa.tecnico.distsys.ttt.contract.PlayRequest;
+import pt.ulisboa.tecnico.distsys.ttt.contract.PlayResult;
+
 /**
  * Root resource (exposed at "game" path)
  */
@@ -57,5 +60,13 @@ public class TTTResources {
     public String checkWinner() {
         int winner = game.checkWinner();
         return Integer.toString(winner);
+    }
+
+    @POST
+    @Path("play")
+    @Consumes({MediaType.APPLICATION_JSON})
+    @Produces({MediaType.APPLICATION_JSON})
+    public PlayResult play(PlayRequest playRequest) {
+        return game.play(playRequest.getRow(), playRequest.getColumn(), playRequest.getPlayer());
     }
 }
